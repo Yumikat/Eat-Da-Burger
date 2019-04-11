@@ -1,0 +1,76 @@
+<h1 class="titleFont">Eat Da Burger!</h1>
+<div id="burgerImage">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.chatelaine.com/wp-content/uploads/2017/05/Bibimbap-homemade-burgers.jpg"
+                    alt="bibimbap burger">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.kitchensanctuary.com/wp-content/uploads/2018/03/Asian-Sticky-Belly-Pork-Burger-with-Pickled-Vegetables-recipe-square-FS.jpg"
+                    alt="pork belly burger">
+            </div>
+            <div class="carousel-item">
+                <img src="http://www.curiousnut.com/wp-content/uploads/2015/05/Chicken-Katsu-Rice-Burger-N.jpg"
+                    alt="katsu burger">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 box">
+            <h2 class="titleFont">Burgers available to eat:</h2>
+
+            <br>
+
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+
+        </div>
+        <div class="col-lg-6 box">
+            <h2 class="titleFont">Burgers already eaten:</h2>
+
+            <br>
+
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 box add">
+            <h2 class="titleFont">Add a burger</h2>
+
+            <br>
+
+            <form class="create-form">
+                <div class="form-group">
+                    {{!-- <label for="burger">Burger:</label> --}}
+                    <input type="text" id="burger" name="burger">
+                </div>
+
+                <button type="submit">ADD!!!!!!!</button>
+            </form>
+        </div>
+    </div>
+</div>

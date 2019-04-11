@@ -1,0 +1,32 @@
+ul {
+    font-family: 'Playfair Display', serif;
+}
+
+.titleFont, button {
+    font-family: 'Dokdo', cursive;
+    text-align: center;
+    color: hotpink;
+}
+
+.box {
+    border: aqua dotted 2px;
+}
+
+.add {
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 10px auto;
+    align-content: center;
+}
+
+#burgerImage {
+    margin: 5px auto;
+}
+
+body {
+    background-color: bisque;
+}
